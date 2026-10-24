@@ -32,7 +32,22 @@ async function waitForPort(portNumber, timeoutMs = 30_000) {
   throw new Error(`Timed out waiting for the DevTools port ${portNumber}`);
 }
 
-await rm(userDataDir, { recursive: true, force: true });
+async function removeUserDataDir() {
+  for (let attempt = 0; attempt < 20; attempt += 1) {
+    try {
+      await rm(userDataDir, { recursive: true, force: true });
+      return;
+    } catch (error) {
+      if (attempt === 19) {
+        console.warn(`Could not remove ${userDataDir} after 20 attempts: ${String(error)}`);
+        return;
+      }
+      await new Promise((resolveDelay) => setTimeout(resolveDelay, 250));
+    }
+  }
+}
+
+await removeUserDataDir();
 const child = spawn(
   executablePath,
   [`--remote-debugging-port=${port}`, `--user-data-dir=${userDataDir}`],
@@ -153,5 +168,5 @@ try {
   await browser?.close().catch(() => undefined);
   child.kill();
   await exitPromise;
-  await rm(userDataDir, { recursive: true, force: true });
+  await removeUserDataDir();
 }
