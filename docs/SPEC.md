@@ -523,7 +523,7 @@ Snapshots keep the full exported `Engine\Mods` subtree because they are rollback
 
 | ID | Requirement |
 |----|-------------|
-| SR-1 | Every write targets `HKLM\SOFTWARE\Windhawk\Engine\Mods\<mod-id>` or its `Settings` subkey. Mod IDs match `^[a-z0-9][a-z0-9-]{0,63}$`. |
+| SR-1 | Every write targets `HKLM\SOFTWARE\Windhawk\Engine\Mods\<mod-id>` or its `Settings` subkey. Normal mod IDs match `^[a-z0-9][a-z0-9-]{0,63}$`; Windhawk local mods may use the documented `local@` prefix. |
 | SR-2 | The GUI runs non-elevated. Only the helper runs elevated, only for the privileged registry phase and a service check/start. Rainmeter and Explorer actions run in the main process. |
 | SR-3 | The helper receives a plan file path and a hash. It validates the schema, the allowlist, and the hash before writing. |
 | SR-4 | Profiles and snapshots are validated at import and before execution; unknown fields and out-of-allowlist keys are rejected. |

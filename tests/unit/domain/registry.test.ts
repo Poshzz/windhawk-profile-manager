@@ -54,6 +54,14 @@ describe('registry schemas', () => {
     expect(RegistryKeyPathSchema.safeParse(path).success).toBe(false);
   });
 
+  it('accepts a local Windhawk mod key as a safe registry path', () => {
+    const path =
+      'HKLM\\SOFTWARE\\Windhawk\\Engine\\Mods\\local@windows-11-notification-center-styler-fork';
+
+    expect(RegistryKeyPathSchema.safeParse(path).success).toBe(true);
+    expect(getModIdFromRegistryPath(path)).toBe('local@windows-11-notification-center-styler-fork');
+  });
+
   it('rejects a snapshot key outside the Windhawk mods root with a field path', () => {
     const error = validationError(() =>
       parseRegistrySnapshotJson(readFixture('snapshots/invalid-outside-root.json')),

@@ -119,6 +119,21 @@ describe('.reg codec', () => {
     ]);
   });
 
+  it('accepts a locally-added mod key from a Windhawk registry export', () => {
+    const text = [
+      'Windows Registry Editor Version 5.00',
+      '',
+      '[HKEY_LOCAL_MACHINE\\SOFTWARE\\Windhawk\\Engine\\Mods\\local@windows-11-notification-center-styler-fork]',
+      '"Disabled"=dword:00000000',
+    ].join('\r\n');
+
+    const snapshot = parseRegFile(text, { capturedAt: CAPTURED_AT });
+
+    expect(snapshot.keys[0]?.path).toBe(
+      'HKLM\\SOFTWARE\\Windhawk\\Engine\\Mods\\local@windows-11-notification-center-styler-fork',
+    );
+  });
+
   it('supports line continuations for hex data', () => {
     const text = [
       'Windows Registry Editor Version 5.00',

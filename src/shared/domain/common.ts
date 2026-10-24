@@ -10,11 +10,18 @@ export const EntityIdSchema = z
   .max(64)
   .regex(/^[a-z0-9][a-z0-9-]{0,63}$/, 'Must be a lowercase slug (a-z, 0-9, hyphen).');
 
+/**
+ * Windhawk IDs are lowercase slugs. Locally-added mods use Windhawk's documented
+ * `local@` prefix, e.g. `local@windows-11-notification-center-styler-fork`.
+ * The prefix is still constrained to a single safe registry path component.
+ */
+export const MOD_ID_PATTERN = /^(?:local@)?[a-z0-9][a-z0-9-]{0,63}$/;
+
 export const ModIdSchema = z
   .string()
   .min(1)
-  .max(64)
-  .regex(/^[a-z0-9][a-z0-9-]{0,63}$/, 'Mod IDs must match ^[a-z0-9][a-z0-9-]{0,63}$.');
+  .max(70)
+  .regex(MOD_ID_PATTERN, 'Mod IDs must match ^(?:local@)?[a-z0-9][a-z0-9-]{0,63}$.');
 
 export const SnapshotIdSchema = z
   .string()

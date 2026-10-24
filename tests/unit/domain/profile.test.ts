@@ -57,7 +57,7 @@ describe('profile schema', () => {
       label: 'invalid mod ID',
       file: 'profiles/invalid-mod-id.json',
       path: 'requiredMods[0].modId',
-      message: '^[a-z0-9][a-z0-9-]{0,63}$',
+      message: 'Mod IDs must match',
     },
   ] as const;
 

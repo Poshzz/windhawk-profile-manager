@@ -47,6 +47,24 @@ describe('captureProfileMods', () => {
     );
   });
 
+  it('captures a locally-added Windhawk mod using its local@ ID', () => {
+    const snapshot = makeSnapshot([
+      ...modKeys('local@windows-11-notification-center-styler-fork', {
+        enabled: true,
+        settings: { Theme: stringValue('macOS') },
+      }),
+    ]);
+
+    expect(captureProfileMods(snapshot, true)).toEqual([
+      {
+        modId: 'local@windows-11-notification-center-styler-fork',
+        state: 'enabled',
+        mode: 'replace',
+        settings: { Theme: stringValue('macOS') },
+      },
+    ]);
+  });
+
   it('can omit disabled mods', () => {
     const snapshot = makeSnapshot([
       ...modKeys('enabled-mod', { enabled: true }),

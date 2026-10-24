@@ -32,6 +32,21 @@ describe('common schemas', () => {
     expect(schema.safeParse(invalid).success).toBe(false);
   });
 
+  it('accepts Windhawk local mod IDs but rejects malformed variants', () => {
+    expect(ModIdSchema.safeParse('local@windows-11-notification-center-styler-fork').success).toBe(
+      true,
+    );
+    for (const value of [
+      'local@',
+      'local@../escape',
+      'local@Windows_11',
+      'local@windows/other',
+      'Local@windows-11',
+    ]) {
+      expect(ModIdSchema.safeParse(value).success).toBe(false);
+    }
+  });
+
   it('detects control characters in names', () => {
     expect(hasControlCharacters('normal name')).toBe(false);
     expect(hasControlCharacters('bad\u0000name')).toBe(true);

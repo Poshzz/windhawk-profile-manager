@@ -24,12 +24,14 @@ describe('release configuration', () => {
     );
   });
 
-  it('documents the release gate, license, notes, and checksum script', () => {
+  it('documents the release gate, MIT license, notes, and checksum script', () => {
     const readme = readFileSync(resolve(root, 'README.md'), 'utf8');
-    expect(readme).toContain('Release status');
+    expect(readme).toContain('Developer Build Notice');
     expect(readme).toContain('Smart App Control');
+    expect(readme).toContain('MIT License');
     expect(readme).toContain('npm run release:checksums');
     expect(existsSync(resolve(root, 'LICENSE'))).toBe(true);
+    expect(readFileSync(resolve(root, 'LICENSE'), 'utf8')).toContain('MIT License');
     expect(existsSync(resolve(root, 'docs', 'release-notes', 'v0.1.0.md'))).toBe(true);
     expect(existsSync(resolve(root, 'scripts', 'write-checksums.mjs'))).toBe(true);
   });
