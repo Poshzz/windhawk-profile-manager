@@ -4,7 +4,7 @@
   "description": "Safe profile switching for Windhawk mods on Windows 11.",
   "productName": "Windhawk Profile Manager",
   "private": true,
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "author": "Poshzz",
   "main": "./out/main/index.js",
   "engines": {
