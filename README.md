@@ -21,7 +21,6 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Visual Preview](#visual-preview)
 - [Key Features](#key-features)
 - [Bundled Profiles and Themes](#bundled-profiles-and-themes)
 - [Safety and Architecture](#safety-and-architecture)
@@ -45,16 +44,6 @@ Configuring Windhawk mods manually can be tedious and prone to registry misalign
 
 > [!WARNING]
 > **Developer Build Notice:** Release `v0.1.0-dev.1` is an unsigned test build. Because binaries do not yet have an Authenticode certificate, Windows SmartScreen and Smart App Control will flag or block installation. Refer to [`docs/UNSIGNED-BUILD.md`](./docs/UNSIGNED-BUILD.md) for verification checksums and test-VM instructions.
-
----
-
-## Visual Preview
-
-| Application Management Interface | Translucent Desktop Result |
-| :---: | :---: |
-| ![Manager Dashboard Preview](docs/images/app-preview.png) | ![Desktop Theme Result](docs/images/desktop-preview.png) |
-
-*(Screenshots can be added under `docs/images/` to illustrate interface workflows and theme results.)*
 
 ---
 
