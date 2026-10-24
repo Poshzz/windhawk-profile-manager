@@ -3,9 +3,9 @@
 **Status:** developer/test only. This build has **no Authenticode signature** and
 is **not a public release**.
 
-- Artifact: `release/Windhawk-Profile-Manager-0.1.0-x64.exe`
-- SHA-256: `117146d52a69e0d14fc98c215e34dc45311ee4205661c7e8c73e10af1cb9c3c2`
-- Source tag: `v0.1.0-dev.2`
+- Artifact: `release/Windhawk-Profile-Manager-0.1.0-dev.3-x64.exe`
+- SHA-256: `15f733e4eda26755b192b9f5da82f2e5f9c394f9401ec2e77b5468dca3ad7629`
+- Source tag: `v0.1.0-dev.3`
 - Installer type: per-machine NSIS; installs to
   `%ProgramFiles%\WindhawkProfileManager`
 - Signature: **NotSigned**
@@ -36,9 +36,9 @@ for end users.
 ## Verify the artifact
 
 ```powershell
-Get-FileHash .\Windhawk-Profile-Manager-0.1.0-x64.exe -Algorithm SHA256
+Get-FileHash .\Windhawk-Profile-Manager-0.1.0-dev.3-x64.exe -Algorithm SHA256
 # Expected:
-# F7BD3D6D88B918AF986D005B3B9A1535A23A6F2BE35FD381E2CCBD73C54606E3
+# 15F733E4EDA26755B192B9F5DA82F2E5F9C394F9401EC2E77B5468DCA3AD7629
 ```
 
 Use it only if the hash matches and the file came from the expected build/source.

@@ -1,6 +1,6 @@
 {
   "name": "windhawk-profile-manager",
-  "version": "0.1.0",
+  "version": "0.1.0-dev.3",
   "description": "Safe profile switching for Windhawk mods on Windows 11.",
   "productName": "Windhawk Profile Manager",
   "private": true,

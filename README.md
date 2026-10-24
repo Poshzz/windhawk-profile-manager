@@ -16,6 +16,8 @@
   <img src="https://img.shields.io/badge/Privacy-100%25%20Offline-57606a?style=flat-square" alt="Privacy: Offline" />
 </p>
 
+**Latest developer build: [`v0.1.0-dev.3`](https://github.com/Poshzz/windhawk-profile-manager/releases/tag/v0.1.0-dev.3)** — download `Windhawk-Profile-Manager-0.1.0-dev.3-x64.exe`.
+
 ---
 
 ## Table of Contents
@@ -43,7 +45,7 @@
 Configuring Windhawk mods manually can be tedious and prone to registry misalignment. This manager provides an automated, transactional layer that captures machine states, verifies execution plans, coordinates an isolated elevated helper, and ensures zero runtime downtime for the core Windhawk engine.
 
 > [!WARNING]
-> **Developer Build Notice:** Release `v0.1.0-dev.2` is an unsigned test build. Because binaries do not yet have an Authenticode certificate, Windows SmartScreen and Smart App Control will flag or block installation. Refer to [`docs/UNSIGNED-BUILD.md`](./docs/UNSIGNED-BUILD.md) for verification checksums and test-VM instructions.
+> **Developer Build Notice:** Release `v0.1.0-dev.3` is an unsigned test build. Because binaries do not yet have an Authenticode certificate, Windows SmartScreen and Smart App Control will flag or block installation. Refer to [`docs/UNSIGNED-BUILD.md`](./docs/UNSIGNED-BUILD.md) for verification checksums and test-VM instructions.
 
 ---
 
@@ -119,7 +121,7 @@ The elevated helper enforces a strict write sandbox:
 ### For End Users
 
 1. Navigate to the [Releases](https://github.com/Poshzz/windhawk-profile-manager/releases) page.
-2. Download the latest installer executable: `Windhawk-Profile-Manager-<version>-x64.exe`.
+2. Download the latest installer executable. The filename includes the release version, for example `Windhawk-Profile-Manager-0.1.0-dev.3-x64.exe`, so you can confirm which build you have before installing.
 3. Run the setup package. It installs per-machine into `%ProgramFiles%\WindhawkProfileManager` to ensure the elevated helper resides within protected storage.
 4. Launch **Windhawk Profile Manager** from the Windows Start menu.
 5. Review the first-run overview, choose a profile, inspect the changes, and approve the UAC prompt.

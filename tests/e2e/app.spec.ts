@@ -8,6 +8,7 @@ import {
   type ElectronApplication,
   type Page,
 } from '@playwright/test';
+import packageJson from '../../package.json';
 import th from '../../src/renderer/i18n/locales/th.json';
 
 interface LaunchResult {
@@ -112,7 +113,7 @@ test('opens at the designed size, enforces the minimum, and exposes the typed br
     });
 
     expect(result.ping).toMatchObject({ ok: true, message: 'pong' });
-    expect(result.versions.app).toBe('0.1.0');
+    expect(result.versions.app).toBe(packageJson.version);
     expect(result.config.titlebarMode).toBe('overlay');
     expect(result.config.systemLocale).toBe('en');
     expect(['mica', 'opaque']).toContain(result.config.backgroundMaterial);
@@ -122,7 +123,7 @@ test('opens at the designed size, enforces the minimum, and exposes the typed br
     expect(result.hasProcess).toBe(false);
     expect(result.hasElectron).toBe(false);
 
-    await expect(page.getByText('Version 0.1.0')).toBeVisible();
+    await expect(page.getByText(`Version ${packageJson.version}`)).toBeVisible();
     await expect(page.getByRole('button', { name: 'Component gallery' })).toHaveCount(0);
   } finally {
     await cleanup(app, userDataDir);
