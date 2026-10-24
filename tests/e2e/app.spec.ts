@@ -68,7 +68,7 @@ test('opens at the designed size, enforces the minimum, and exposes the typed br
 
     await expect(page.getByRole('heading', { name: 'Windhawk Profile Manager' })).toBeVisible();
 
-    const windowState = await app.evaluate(({ BrowserWindow }) => {
+    const windowState = await app.evaluate(({ BrowserWindow, screen }) => {
       const window = BrowserWindow.getAllWindows()[0];
       if (window === undefined) throw new Error('No application window');
       const bounds = window.getBounds();
@@ -77,13 +77,17 @@ test('opens at the designed size, enforces the minimum, and exposes the typed br
         bounds,
         minimum: window.getMinimumSize(),
         enforced: window.getSize(),
+        workArea: screen.getPrimaryDisplay().workAreaSize,
       };
     });
-    // Windows adds a small invisible frame at non-100% display scaling.
-    expect(windowState.bounds.width).toBeGreaterThanOrEqual(1118);
-    expect(windowState.bounds.width).toBeLessThanOrEqual(1124);
-    expect(windowState.bounds.height).toBeGreaterThanOrEqual(738);
-    expect(windowState.bounds.height).toBeLessThanOrEqual(746);
+    // The CI desktop can be 1024px wide; the OS clamps the requested window to
+    // the work area. Windows also adds a small invisible frame at some scales.
+    const expectedWidth = Math.min(1120, windowState.workArea.width);
+    const expectedHeight = Math.min(740, windowState.workArea.height);
+    expect(windowState.bounds.width).toBeGreaterThanOrEqual(expectedWidth - 8);
+    expect(windowState.bounds.width).toBeLessThanOrEqual(expectedWidth + 8);
+    expect(windowState.bounds.height).toBeGreaterThanOrEqual(expectedHeight - 8);
+    expect(windowState.bounds.height).toBeLessThanOrEqual(expectedHeight + 8);
     expect(windowState.minimum).toEqual([900, 600]);
     expect(windowState.enforced[0]).toBeGreaterThanOrEqual(900);
     expect(windowState.enforced[1]).toBeGreaterThanOrEqual(600);
