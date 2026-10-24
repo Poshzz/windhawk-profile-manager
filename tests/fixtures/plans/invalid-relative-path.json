@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "apply",
+  "runId": "run-2026-10-22T20-02-14-123Z",
+  "snapshotId": "2026-10-22T20-02-14-123Z",
+  "profileId": "mac-blur-glass",
+  "profileRevision": 3,
+  "beforeHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "paths": {
+    "plan": "relative\\plan.json",
+    "snapshotRegistry": "C:\\Users\\Test\\AppData\\Local\\WindhawkProfileManager\\snapshots\\2026-10-22T20-02-14-123Z.reg",
+    "journal": "C:\\Users\\Test\\AppData\\Local\\WindhawkProfileManager\\snapshots\\2026-10-22T20-02-14-123Z.journal.json",
+    "result": "C:\\ProgramData\\WindhawkProfileManager\\runs\\run-2026-10-22T20-02-14-123Z\\result.json"
+  },
+  "actions": {
+    "rainmeter": "unchanged",
+    "restartExplorer": "ask"
+  },
+  "planHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "modChanges": [],
+  "missingMods": [],
+  "unlistedMods": [],
+  "noOp": true,
+  "warnings": []
+}

@@ -1,0 +1,3 @@
+﻿
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Windhawk
+    install_dir    REG_SZ    C:\Program Files\Windhawk

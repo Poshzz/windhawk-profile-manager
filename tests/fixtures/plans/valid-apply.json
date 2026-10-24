@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "apply",
+  "runId": "run-2026-10-22T20-02-14-123Z",
+  "snapshotId": "2026-10-22T20-02-14-123Z",
+  "profileId": "mac-blur-glass",
+  "profileRevision": 3,
+  "beforeHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "paths": {
+    "plan": "C:\\ProgramData\\WindhawkProfileManager\\runs\\run-2026-10-22T20-02-14-123Z\\plan.json",
+    "snapshotRegistry": "C:\\Users\\Test\\AppData\\Local\\WindhawkProfileManager\\snapshots\\2026-10-22T20-02-14-123Z.reg",
+    "journal": "C:\\Users\\Test\\AppData\\Local\\WindhawkProfileManager\\journal.json",
+    "result": "C:\\ProgramData\\WindhawkProfileManager\\runs\\run-2026-10-22T20-02-14-123Z\\result.json"
+  },
+  "actions": {
+    "rainmeter": "start",
+    "restartExplorer": "ask"
+  },
+  "planHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "modChanges": [
+    {
+      "modId": "windows-11-taskbar-styler",
+      "state": "enabled",
+      "mode": "replace",
+      "settings": {
+        "TaskbarHeight": { "type": "dword", "value": 48 },
+        "Theme": { "type": "string", "value": "macOS" }
+      },
+      "deleteValues": ["LegacyTheme"],
+      "settingsChanged": true,
+      "deleteAllSettings": false,
+      "settingsHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    }
+  ],
+  "missingMods": [
+    { "modId": "missing-mod", "reason": "missing", "message": "Install it from windhawk.net." }
+  ],
+  "unlistedMods": [
+    {
+      "modId": "unlisted-mod",
+      "state": "enabled",
+      "policy": "leave",
+      "willDisable": false
+    }
+  ],
+  "unlistedPolicy": "leave",
+  "noOp": false,
+  "deleteAllSettingsConfirmed": false,
+  "warnings": []
+}

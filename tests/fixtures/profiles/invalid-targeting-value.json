@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "mac-blur-glass",
+  "name": "Mac Blur Glass",
+  "description": "Targeting value fixture.",
+  "source": "user",
+  "basedOn": null,
+  "revision": 2,
+  "createdAt": "2026-10-22T12:00:00.000Z",
+  "updatedAt": "2026-10-22T12:01:00.000Z",
+  "requiredMods": [
+    {
+      "modId": "windows-11-taskbar-styler",
+      "state": "enabled",
+      "mode": "merge",
+      "settings": {
+        "Include": { "type": "string", "value": "explorer.exe" }
+      }
+    }
+  ],
+  "unlistedMods": "leave",
+  "actions": {
+    "rainmeter": "unchanged",
+    "restartExplorer": "ask"
+  }
+}

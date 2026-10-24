@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-22T20:02:14.123Z",
+  "registryView": "64-bit",
+  "keys": [
+    {
+      "path": "HKLM\\SOFTWARE\\Windhawk\\Engine\\Mods\\mac-blur-glass",
+      "values": [
+        { "name": "Disabled", "value": { "type": "dword", "value": 0 } },
+        {
+          "name": "BigNumber",
+          "value": { "type": "qword", "value": "18446744073709551615" }
+        },
+        {
+          "name": "LibraryFileName",
+          "value": { "type": "string", "value": "mac-blur-glass.dll" }
+        },
+        {
+          "name": "ExpandPath",
+          "value": { "type": "expandString", "value": "%SystemRoot%\\System32" }
+        },
+        {
+          "name": "Patterns",
+          "value": {
+            "type": "multiString",
+            "value": ["explorer.exe", "shellhost.exe"]
+          }
+        },
+        { "name": "Blob", "value": { "type": "binary", "value": "00FF10" } },
+        { "name": "", "value": { "type": "none", "value": null } }
+      ]
+    },
+    {
+      "path": "HKLM\\SOFTWARE\\Windhawk\\Engine\\Mods\\mac-blur-glass\\Settings",
+      "values": [
+        { "name": "Theme", "value": { "type": "string", "value": "macOS" } }
+      ]
+    }
+  ]
+}

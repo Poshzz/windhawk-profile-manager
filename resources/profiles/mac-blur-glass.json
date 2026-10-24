@@ -1,0 +1,776 @@
+{
+  "actions": {
+    "rainmeter": "start",
+    "restartExplorer": "ask"
+  },
+  "basedOn": null,
+  "createdAt": "2026-10-22T12:00:00.000Z",
+  "description": "macOS-style blur, dock, menu, and control styling for Windows 11.",
+  "id": "mac-blur-glass",
+  "name": "Mac Blur Glass",
+  "requiredMods": [
+    {
+      "modId": "icon-resource-redirect",
+      "mode": "replace",
+      "settings": {
+        "allResourceRedirect": {
+          "type": "dword",
+          "value": 0
+        },
+        "disableThumbnails": {
+          "type": "dword",
+          "value": 1
+        },
+        "iconTheme": {
+          "type": "string",
+          "value": "macOS DarkMode|themes/icons/niivu/macOS%20Dark%20Mode.zip"
+        },
+        "redirectionResourcePaths[0].original": {
+          "type": "string",
+          "value": ""
+        },
+        "redirectionResourcePaths[0].redirect": {
+          "type": "string",
+          "value": ""
+        },
+        "themeFolder": {
+          "type": "string",
+          "value": ""
+        },
+        "themePaths[0]": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "macos-minimize-animation",
+      "mode": "replace",
+      "settings": {
+        "duration_ms": {
+          "type": "dword",
+          "value": 450
+        },
+        "engine": {
+          "type": "string",
+          "value": "classic"
+        },
+        "excluded_programs[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "launch_animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "multi_monitor": {
+          "type": "dword",
+          "value": 0
+        },
+        "open_animation": {
+          "type": "dword",
+          "value": 1
+        },
+        "tile_count": {
+          "type": "dword",
+          "value": 35
+        },
+        "unhide_duration_ms": {
+          "type": "dword",
+          "value": 450
+        },
+        "unhide_taskbar": {
+          "type": "dword",
+          "value": 1
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "taskbar-dock-animation",
+      "mode": "replace",
+      "settings": {
+        "AnimationType": {
+          "type": "dword",
+          "value": 0
+        },
+        "BounceDelay": {
+          "type": "dword",
+          "value": 500
+        },
+        "DisableBounce": {
+          "type": "dword",
+          "value": 1
+        },
+        "DisableVerticalBounce": {
+          "type": "dword",
+          "value": 0
+        },
+        "EffectRadius": {
+          "type": "dword",
+          "value": 0
+        },
+        "ExcludeSystemButtonsMode": {
+          "type": "dword",
+          "value": 0
+        },
+        "FocusDuration": {
+          "type": "dword",
+          "value": 150
+        },
+        "LerpSpeed": {
+          "type": "dword",
+          "value": 100
+        },
+        "MaxScale": {
+          "type": "dword",
+          "value": 128
+        },
+        "MirrorForTopTaskbar": {
+          "type": "dword",
+          "value": 0
+        },
+        "SpacingFactor": {
+          "type": "dword",
+          "value": 100
+        },
+        "TaskbarLabelsMode": {
+          "type": "dword",
+          "value": 0
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "translucent-windows",
+      "mode": "replace",
+      "settings": {
+        "BackgroundEffects.AccentBlurBehind": {
+          "type": "string",
+          "value": "3A232323"
+        },
+        "BackgroundEffects.type": {
+          "type": "string",
+          "value": "acrylicblur"
+        },
+        "FlyoutsEffects": {
+          "type": "dword",
+          "value": 1
+        },
+        "RenderingMod.AccentColorControls": {
+          "type": "dword",
+          "value": 1
+        },
+        "RenderingMod.SysColors": {
+          "type": "dword",
+          "value": 0
+        },
+        "RenderingMod.ThemeBackground": {
+          "type": "dword",
+          "value": 1
+        },
+        "RuledPrograms[0].BackgroundEffects.AccentBlurBehind": {
+          "type": "string",
+          "value": "3A232323"
+        },
+        "RuledPrograms[0].BackgroundEffects.type": {
+          "type": "string",
+          "value": "none"
+        },
+        "RuledPrograms[0].RenderingMod.AccentColorControls": {
+          "type": "dword",
+          "value": 0
+        },
+        "RuledPrograms[0].RenderingMod.ThemeBackground": {
+          "type": "dword",
+          "value": 0
+        },
+        "RuledPrograms[0].target": {
+          "type": "string",
+          "value": "Notepad.exe"
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "uxtheme-hook",
+      "mode": "replace",
+      "settings": {
+        "preventSettings": {
+          "type": "dword",
+          "value": 0
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "windows-11-file-explorer-styler",
+      "mode": "replace",
+      "settings": {
+        "backgroundTranslucentEffect": {
+          "type": "string",
+          "value": "micaAlt"
+        },
+        "backgroundTranslucentEffectRegion": {
+          "type": "string",
+          "value": ""
+        },
+        "controlStyles[0].styles[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "controlStyles[0].target": {
+          "type": "string",
+          "value": ""
+        },
+        "explorerFrameContainerHeight": {
+          "type": "dword",
+          "value": 0
+        },
+        "styleConstants[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "theme": {
+          "type": "string",
+          "value": "OS26 Liquid Glass_variant_Compact"
+        },
+        "themeResourceVariables[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "xamlDiagnosticsHandling": {
+          "type": "string",
+          "value": "alert"
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "windows-11-notification-center-styler",
+      "mode": "replace",
+      "settings": {
+        "controlStyles[0].styles[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "controlStyles[0].target": {
+          "type": "string",
+          "value": ""
+        },
+        "styleConstants[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "theme": {
+          "type": "string",
+          "value": "TranslucentShell"
+        },
+        "themeResourceVariables[0]": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "windows-11-settings-styler",
+      "mode": "replace",
+      "settings": {
+        "controlStyles[0].styles[0]": {
+          "type": "string",
+          "value": "Margin=2"
+        },
+        "controlStyles[0].target": {
+          "type": "string",
+          "value": "Border > Frame > ContentPresenter > SystemSettings.View.RootPage > Grid#RootPageGrid > Microsoft.UI.Xaml.Controls.NavigationView#PermanentNavigationView > Grid#RootGrid > Grid > SplitView#RootSplitView > Grid > Grid#ContentRoot > Border > Grid#ContentGrid > ContentPresenter#ContentPresenter"
+        },
+        "controlStyles[10].styles[0]": {
+          "type": "string",
+          "value": "CornerRadius=3"
+        },
+        "controlStyles[10].styles[1]": {
+          "type": "string",
+          "value": "Height=6"
+        },
+        "controlStyles[10].target": {
+          "type": "string",
+          "value": "Windows.UI.Xaml.Controls.Border#DeterminateRoot"
+        },
+        "controlStyles[11].styles[0]": {
+          "type": "string",
+          "value": "Height=6"
+        },
+        "controlStyles[11].target": {
+          "type": "string",
+          "value": "Windows.UI.Xaml.Controls.ProgressBar"
+        },
+        "controlStyles[12].styles[0]": {
+          "type": "string",
+          "value": "Height=16"
+        },
+        "controlStyles[12].target": {
+          "type": "string",
+          "value": "Windows.UI.Xaml.Controls.StackPanel#TopBreakdownBar > Windows.UI.Xaml.Controls.ProgressBar > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Controls.Border#DeterminateRoot > Windows.UI.Xaml.Shapes.Rectangle#ProgressBarIndicator"
+        },
+        "controlStyles[13].styles[0]": {
+          "type": "string",
+          "value": "Height=16"
+        },
+        "controlStyles[13].target": {
+          "type": "string",
+          "value": "Windows.UI.Xaml.Controls.StackPanel#TopBreakdownBar > Windows.UI.Xaml.Controls.ProgressBar > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Controls.Border#DeterminateRoot"
+        },
+        "controlStyles[14].styles[0]": {
+          "type": "string",
+          "value": "Height=16"
+        },
+        "controlStyles[14].target": {
+          "type": "string",
+          "value": "Windows.UI.Xaml.Controls.StackPanel#TopBreakdownBar > Windows.UI.Xaml.Controls.ProgressBar"
+        },
+        "controlStyles[15].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[15].target": {
+          "type": "string",
+          "value": "Microsoft.UI.Xaml.Controls.NavigationView#PermanentNavigationView > Grid#RootGrid > Grid > SplitView#RootSplitView > Grid@DisplayModeStates > Grid#PaneRoot"
+        },
+        "controlStyles[16].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[16].target": {
+          "type": "string",
+          "value": "Grid#ContentRoot > Border > Grid#ContentGrid > ContentControl#HeaderContent"
+        },
+        "controlStyles[17].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[17].target": {
+          "type": "string",
+          "value": "Frame#PermanentNavRootFrame"
+        },
+        "controlStyles[18].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[18].target": {
+          "type": "string",
+          "value": "Border > Frame > ContentPresenter > SystemSettings.View.RootPage > Grid#RootPageGrid"
+        },
+        "controlStyles[19].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[19].target": {
+          "type": "string",
+          "value": "SystemSettings.View.RootPage > Grid#RootPageGrid"
+        },
+        "controlStyles[1].styles[0]": {
+          "type": "string",
+          "value": "Margin=10,-38,0,5"
+        },
+        "controlStyles[1].target": {
+          "type": "string",
+          "value": "Grid#ContentRoot > Border > Grid#ContentGrid > ContentControl#HeaderContent"
+        },
+        "controlStyles[20].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[20].target": {
+          "type": "string",
+          "value": "Microsoft.UI.Xaml.Controls.NavigationView#PermanentNavigationView > Grid#RootGrid"
+        },
+        "controlStyles[21].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[21].target": {
+          "type": "string",
+          "value": "Microsoft.UI.Xaml.Controls.NavigationView#PermanentNavigationView > Grid#RootGrid > Grid"
+        },
+        "controlStyles[22].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[22].target": {
+          "type": "string",
+          "value": "Grid#ContentRoot"
+        },
+        "controlStyles[23].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[23].target": {
+          "type": "string",
+          "value": "SplitView#RootSplitView > Grid > Grid#ContentRoot"
+        },
+        "controlStyles[24].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[24].target": {
+          "type": "string",
+          "value": "Grid#RootGrid"
+        },
+        "controlStyles[25].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[25].target": {
+          "type": "string",
+          "value": "Grid#AppTitleBar"
+        },
+        "controlStyles[26].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[26].target": {
+          "type": "string",
+          "value": "Border#AppTitleBarBackground"
+        },
+        "controlStyles[27].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[27].target": {
+          "type": "string",
+          "value": "Grid#TitleBar"
+        },
+        "controlStyles[28].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[28].target": {
+          "type": "string",
+          "value": "Border#TitleBarBackground"
+        },
+        "controlStyles[29].styles[0]": {
+          "type": "string",
+          "value": "CornerRadius=$InRadius"
+        },
+        "controlStyles[29].styles[1]": {
+          "type": "string",
+          "value": "MinHeight=32"
+        },
+        "controlStyles[29].styles[2]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[29].styles[3]": {
+          "type": "string",
+          "value": "BorderBrush:=<SolidColorBrush Color=\"#22FFFFFF\"/>"
+        },
+        "controlStyles[29].styles[4]": {
+          "type": "string",
+          "value": "BorderThickness=1"
+        },
+        "controlStyles[29].target": {
+          "type": "string",
+          "value": "TextBox#CommandSearchTextBox"
+        },
+        "controlStyles[2].styles[0]": {
+          "type": "string",
+          "value": "Margin=-12,8,0,0"
+        },
+        "controlStyles[2].target": {
+          "type": "string",
+          "value": "SplitView#RootSplitView > Grid > Grid#PaneRoot > Border > Grid#PaneContentGrid > Grid#ItemsContainerGrid > Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost > ScrollViewer#MenuItemsScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter"
+        },
+        "controlStyles[3].styles[0]": {
+          "type": "string",
+          "value": "CornerRadius=$InRadius"
+        },
+        "controlStyles[3].styles[1]": {
+          "type": "string",
+          "value": "MinHeight=32"
+        },
+        "controlStyles[3].target": {
+          "type": "string",
+          "value": "TextBox#CommandSearchTextBox > Grid > Button#DeleteButton > Grid#ButtonLayoutGrid"
+        },
+        "controlStyles[4].styles[0]": {
+          "type": "string",
+          "value": "CornerRadius=$InRadius"
+        },
+        "controlStyles[4].styles[1]": {
+          "type": "string",
+          "value": "MinHeight=32"
+        },
+        "controlStyles[4].target": {
+          "type": "string",
+          "value": "TextBox#CommandSearchTextBox"
+        },
+        "controlStyles[5].styles[0]": {
+          "type": "string",
+          "value": "CornerRadius=$InRadius"
+        },
+        "controlStyles[5].styles[1]": {
+          "type": "string",
+          "value": "MinHeight=32"
+        },
+        "controlStyles[5].target": {
+          "type": "string",
+          "value": "StackPanel#SettingsCommandSearchBoxBackground"
+        },
+        "controlStyles[6].styles[0]": {
+          "type": "string",
+          "value": "Background:=<AcrylicBrush BackgroundSource=\"HostBackdrop\" TintColor=\"#00000000\" FallbackColor=\"#00000000\" TintOpacity=\"0\" TintLuminosityOpacity=\"0\" Opacity=\"1\"/>"
+        },
+        "controlStyles[6].styles[1]": {
+          "type": "string",
+          "value": "BorderBrush:=$BgBorder"
+        },
+        "controlStyles[6].styles[2]": {
+          "type": "string",
+          "value": "BorderThickness=1,0,0,0"
+        },
+        "controlStyles[6].target": {
+          "type": "string",
+          "value": "SplitView#RootSplitView > Grid > Grid#ContentRoot > Border > Grid#ContentGrid"
+        },
+        "controlStyles[7].styles[0]": {
+          "type": "string",
+          "value": "Padding=3,0,0,0"
+        },
+        "controlStyles[7].target": {
+          "type": "string",
+          "value": "SystemSettings.View.SettingsNavigationViewItem > Grid#NVIRootGrid > Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter#NavigationViewItemPresenter > Grid#LayoutRoot > Grid#PresenterContentRootGrid > Grid#ContentGrid > ContentPresenter#ContentPresenter > TextBlock"
+        },
+        "controlStyles[8].styles[0]": {
+          "type": "string",
+          "value": "FontFamily=Segoe Fluent Icons"
+        },
+        "controlStyles[8].styles[1]": {
+          "type": "string",
+          "value": "Foreground@Normal:=<SolidColorBrush Color=\"{ThemeResource TextFillColorSecondary}\" />"
+        },
+        "controlStyles[8].styles[2]": {
+          "type": "string",
+          "value": "Foreground@PointerOver:=<SolidColorBrush Color=\"{ThemeResource TextFillColorPrimary}\" />"
+        },
+        "controlStyles[8].styles[3]": {
+          "type": "string",
+          "value": "Foreground@Pressed:=<SolidColorBrush Color=\"{ThemeResource TextFillColorPrimary}\" />"
+        },
+        "controlStyles[8].styles[4]": {
+          "type": "string",
+          "value": "Foreground@Selected:=<SolidColorBrush Color=\"{ThemeResource Accent}\" />"
+        },
+        "controlStyles[8].styles[5]": {
+          "type": "string",
+          "value": "Foreground@PointerOverSelected:=<SolidColorBrush Color=\"{ThemeResource Accent}\" />"
+        },
+        "controlStyles[8].styles[6]": {
+          "type": "string",
+          "value": "Foreground@PressedSelected:=<SolidColorBrush Color=\"{ThemeResource Accent}\" />"
+        },
+        "controlStyles[8].styles[7]": {
+          "type": "string",
+          "value": "FontSize=20"
+        },
+        "controlStyles[8].target": {
+          "type": "string",
+          "value": "SystemSettings.View.SettingsNavigationViewItem > Grid#NVIRootGrid > Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter#NavigationViewItemPresenter > Grid#LayoutRoot@PointerStates > Grid#PresenterContentRootGrid > Grid#ContentGrid > Border#IconColumn > Viewbox#IconBox > Border > ContentPresenter#Icon"
+        },
+        "controlStyles[9].styles[0]": {
+          "type": "string",
+          "value": "RadiusX=3"
+        },
+        "controlStyles[9].styles[1]": {
+          "type": "string",
+          "value": "RadiusY=3"
+        },
+        "controlStyles[9].styles[2]": {
+          "type": "string",
+          "value": "Height=6"
+        },
+        "controlStyles[9].styles[3]": {
+          "type": "string",
+          "value": "Fill:=<SolidColorBrush Color=\"{ThemeResource Accent}\"/>"
+        },
+        "controlStyles[9].target": {
+          "type": "string",
+          "value": "Windows.UI.Xaml.Shapes.Rectangle#ProgressBarIndicator"
+        },
+        "styleConstants[0]": {
+          "type": "string",
+          "value": "OutRadius=8"
+        },
+        "styleConstants[1]": {
+          "type": "string",
+          "value": "InRadius=4"
+        },
+        "styleConstants[2]": {
+          "type": "string",
+          "value": "BgBorder=<SolidColorBrush Color=\"{ThemeResource Border}\" />"
+        },
+        "styleConstants[3]": {
+          "type": "string",
+          "value": "BgOverlay=<SolidColorBrush Color=\"{ThemeResource Overlay}\" />"
+        },
+        "themeResourceVariables[0]": {
+          "type": "string",
+          "value": "Overlay@Light=#55FFFFFF"
+        },
+        "themeResourceVariables[10]": {
+          "type": "string",
+          "value": "SolidBackgroundFillColorBase@Dark=#00000000"
+        },
+        "themeResourceVariables[11]": {
+          "type": "string",
+          "value": "SolidBackgroundFillColorBase@Light=#00000000"
+        },
+        "themeResourceVariables[12]": {
+          "type": "string",
+          "value": "SolidBackgroundFillColorSecondary@Dark=#00000000"
+        },
+        "themeResourceVariables[13]": {
+          "type": "string",
+          "value": "SolidBackgroundFillColorSecondary@Light=#00000000"
+        },
+        "themeResourceVariables[14]": {
+          "type": "string",
+          "value": "LayerFillColorDefault@Dark=#00000000"
+        },
+        "themeResourceVariables[15]": {
+          "type": "string",
+          "value": "LayerFillColorDefault@Light=#00000000"
+        },
+        "themeResourceVariables[16]": {
+          "type": "string",
+          "value": "ApplicationPageBackgroundThemeBrush@Dark=#00000000"
+        },
+        "themeResourceVariables[17]": {
+          "type": "string",
+          "value": "ApplicationPageBackgroundThemeBrush@Light=#00000000"
+        },
+        "themeResourceVariables[1]": {
+          "type": "string",
+          "value": "Overlay@Dark=#09FFFFFF"
+        },
+        "themeResourceVariables[2]": {
+          "type": "string",
+          "value": "Border@Light=#0F000000"
+        },
+        "themeResourceVariables[3]": {
+          "type": "string",
+          "value": "Border@Dark=#19000000"
+        },
+        "themeResourceVariables[4]": {
+          "type": "string",
+          "value": "Accent@Dark={ThemeResource SystemAccentColorLight2}"
+        },
+        "themeResourceVariables[5]": {
+          "type": "string",
+          "value": "Accent@Light={ThemeResource SystemAccentColorDark1}"
+        },
+        "themeResourceVariables[6]": {
+          "type": "string",
+          "value": "WindowCaptionBackground@Dark=#00000000"
+        },
+        "themeResourceVariables[7]": {
+          "type": "string",
+          "value": "WindowCaptionBackground@Light=#00000000"
+        },
+        "themeResourceVariables[8]": {
+          "type": "string",
+          "value": "WindowCaptionBackgroundDisabled@Dark=#00000000"
+        },
+        "themeResourceVariables[9]": {
+          "type": "string",
+          "value": "WindowCaptionBackgroundDisabled@Light=#00000000"
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "windows-11-start-menu-styler",
+      "mode": "replace",
+      "settings": {
+        "controlStyles[0].styles[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "controlStyles[0].target": {
+          "type": "string",
+          "value": ""
+        },
+        "disableNewStartMenuLayout": {
+          "type": "string",
+          "value": ""
+        },
+        "styleConstants[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "theme": {
+          "type": "string",
+          "value": "LiquidGlass2"
+        },
+        "themeResourceVariables[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "webContentCustomJs": {
+          "type": "string",
+          "value": ""
+        },
+        "webContentStyles[0].styles[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "webContentStyles[0].target": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "state": "enabled"
+    },
+    {
+      "modId": "windows-11-taskbar-styler",
+      "mode": "replace",
+      "settings": {
+        "clickThroughTaskbar": {
+          "type": "dword",
+          "value": 0
+        },
+        "controlStyles[0].styles[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "controlStyles[0].target": {
+          "type": "string",
+          "value": ""
+        },
+        "styleConstants[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "theme": {
+          "type": "string",
+          "value": "FluentGlass"
+        },
+        "themeResourceVariables[0]": {
+          "type": "string",
+          "value": ""
+        },
+        "xamlDiagnosticsHandling": {
+          "type": "string",
+          "value": "alert"
+        }
+      },
+      "state": "enabled"
+    }
+  ],
+  "revision": 1,
+  "schemaVersion": 1,
+  "source": "builtin",
+  "unlistedMods": "leave",
+  "updatedAt": "2026-10-22T12:00:00.000Z"
+}

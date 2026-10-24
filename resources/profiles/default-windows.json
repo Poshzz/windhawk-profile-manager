@@ -1,0 +1,78 @@
+{
+  "actions": {
+    "rainmeter": "stop",
+    "restartExplorer": "ask"
+  },
+  "basedOn": null,
+  "createdAt": "2026-10-22T12:00:00.000Z",
+  "description": "Stock Windows 11 appearance with the Mac Blur Glass mods disabled.",
+  "id": "default-windows",
+  "name": "Default Windows",
+  "requiredMods": [
+    {
+      "modId": "icon-resource-redirect",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "macos-minimize-animation",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "taskbar-dock-animation",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "translucent-windows",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "uxtheme-hook",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "windows-11-file-explorer-styler",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "windows-11-notification-center-styler",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "windows-11-settings-styler",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "windows-11-start-menu-styler",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    },
+    {
+      "modId": "windows-11-taskbar-styler",
+      "mode": "merge",
+      "settings": {},
+      "state": "disabled"
+    }
+  ],
+  "revision": 1,
+  "schemaVersion": 1,
+  "source": "builtin",
+  "unlistedMods": "leave",
+  "updatedAt": "2026-10-22T12:00:00.000Z"
+}

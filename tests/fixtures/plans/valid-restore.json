@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "restore",
+  "runId": "run-2026-10-22T20-10-00-000Z",
+  "snapshotId": "pre-restore-2026-10-22T20-10-00-000Z",
+  "profileId": null,
+  "profileRevision": 0,
+  "beforeHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "paths": {
+    "plan": "C:\\ProgramData\\WindhawkProfileManager\\runs\\run-2026-10-22T20-10-00-000Z\\plan.json",
+    "snapshotRegistry": "C:\\Users\\Test\\AppData\\Local\\WindhawkProfileManager\\snapshots\\pre-restore-2026-10-22T20-10-00-000Z.reg",
+    "journal": "C:\\Users\\Test\\AppData\\Local\\WindhawkProfileManager\\journal.json",
+    "result": "C:\\ProgramData\\WindhawkProfileManager\\runs\\run-2026-10-22T20-10-00-000Z\\result.json",
+    "sourceSnapshotRegistry": "C:\\Users\\Test\\AppData\\Local\\WindhawkProfileManager\\snapshots\\2026-10-21T10-00-00-000Z.reg"
+  },
+  "actions": {
+    "rainmeter": "unchanged",
+    "restartExplorer": "ask"
+  },
+  "planHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "sourceSnapshotId": "2026-10-21T10-00-00-000Z",
+  "warnings": []
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-22T20-02-14-123Z",
+  "createdAt": "2026-10-22T20:02:14.123Z",
+  "trigger": "pre-apply",
+  "profileId": "mac-blur-glass",
+  "appVersion": "0.1.0",
+  "windowsBuild": "22631",
+  "registryView": "64-bit",
+  "windhawkVersion": "1.7.3",
+  "windhawkStorageMode": "registry",
+  "windhawkServiceName": "Windhawk",
+  "windhawkServiceState": "running",
+  "rainmeterRunning": true,
+  "registryFile": "2026-10-22T20-02-14-123Z.reg",
+  "registrySha256": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "modCount": 10,
+  "scope": "engine-mods-configuration",
+  "excludedPaths": [
+    "C:\\ProgramData\\Windhawk\\Engine\\Mods\\64",
+    "C:\\ProgramData\\Windhawk\\Engine\\ModsWritable"
+  ]
+}

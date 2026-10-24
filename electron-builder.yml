@@ -1,0 +1,31 @@
+appId: com.poshzz.windhawk-profile-manager
+productName: Windhawk Profile Manager
+copyright: Copyright © 2026 Poshzz
+directories:
+  output: release
+  buildResources: resources
+files:
+  - out/**/*
+  - resources/theme-packs/**/*
+  - resources/profiles/**/*
+  - package.json
+  - LICENSE
+  - node_modules/electron-log/**/*
+asar: true
+compression: normal
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  executableName: WindhawkProfileManager
+  icon: resources/icon.ico
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Windhawk Profile Manager
+  artifactName: Windhawk-Profile-Manager-${version}-${arch}.${ext}
+afterPack: scripts/after-pack.cjs
