@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import { ValidationError } from '@shared/errors';
 import { NodeSnapshotFileSystem, type SnapshotAcl } from '@infra/storage/snapshot-file-system';
+import { windowsShortPath } from '../support/windows-short-path';
 
 class RecordingAcl implements SnapshotAcl {
   readonly calls: { path: string; kind: 'file' | 'directory' }[] = [];
@@ -41,6 +42,18 @@ describe('NodeSnapshotFileSystem reparse-point hardening', () => {
 
     expect(acl.calls).toEqual([{ path: directory, kind: 'directory' }]);
   });
+
+  it.runIf(process.platform === 'win32')(
+    'accepts an 8.3 short path that resolves to a real directory',
+    async () => {
+      const root = await temporaryDirectory();
+      const shortRoot = windowsShortPath(root);
+      if (shortRoot === null) return;
+
+      const files = new NodeSnapshotFileSystem(new RecordingAcl());
+      await expect(files.ensureDirectory(join(shortRoot, 'snapshots'))).resolves.toBeUndefined();
+    },
+  );
 
   it.runIf(process.platform === 'win32')(
     'rejects a snapshots directory that is a junction',

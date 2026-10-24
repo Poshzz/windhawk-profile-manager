@@ -1,5 +1,5 @@
-import { constants } from 'node:fs';
-import { access, lstat, mkdir, realpath } from 'node:fs/promises';
+import { constants, type Stats } from 'node:fs';
+import { access, lstat, mkdir } from 'node:fs/promises';
 import { basename, dirname, join, normalize } from 'node:path';
 import type { ExecutionPlan } from '@shared/domain';
 import { ValidationError } from '@shared/errors';
@@ -43,21 +43,41 @@ function isCanonicalJournalPath(path: string): boolean {
   );
 }
 
+function isFileNotFound(error: unknown): boolean {
+  return (
+    typeof error === 'object' &&
+    error !== null &&
+    'code' in error &&
+    (error as { readonly code?: unknown }).code === 'ENOENT'
+  );
+}
+
+/**
+ * lstat() is deliberately used component-by-component instead of realpath().
+ * realpath() also expands harmless 8.3 short names; a reparse point is rejected
+ * only when lstat reports one at the component itself.
+ */
 async function assertNoReparsePoint(path: string, label: string): Promise<void> {
-  let resolved: string;
-  try {
-    resolved = await realpath(path);
-  } catch (error) {
-    throw new ValidationError(
-      `The ${label} could not be resolved; a reparse point is not allowed.`,
-      [],
-      { cause: error },
-    );
-  }
-  if (normalizePath(resolved) !== normalizePath(path)) {
-    throw new ValidationError(
-      `The ${label} resolves through a reparse point or alternate path; it is not allowed.`,
-    );
+  let current = path;
+  for (;;) {
+    let info: Stats;
+    try {
+      info = await lstat(current);
+    } catch (error) {
+      throw new ValidationError(
+        `The ${label} could not be resolved; a reparse point is not allowed.`,
+        [],
+        { cause: error },
+      );
+    }
+    if (info.isSymbolicLink()) {
+      throw new ValidationError(
+        `The ${label} resolves through a reparse point; it is not allowed.`,
+      );
+    }
+    const parent = dirname(current);
+    if (parent === current) return;
+    current = parent;
   }
 }
 
@@ -65,21 +85,14 @@ async function assertNoReparseAncestors(path: string): Promise<void> {
   let current = dirname(path);
   for (;;) {
     try {
-      const resolved = await realpath(current);
-      if (normalizePath(resolved) !== normalizePath(current)) {
+      const info = await lstat(current);
+      if (info.isSymbolicLink()) {
         throw new ValidationError(
           `The ${current} directory resolves through a reparse point; it is not allowed.`,
         );
       }
     } catch (error) {
-      if (!(
-        typeof error === 'object' &&
-        error !== null &&
-        'code' in error &&
-        (error as { readonly code?: unknown }).code === 'ENOENT'
-      )) {
-        throw error;
-      }
+      if (!isFileNotFound(error)) throw error;
     }
     const parent = dirname(current);
     if (parent === current) return;

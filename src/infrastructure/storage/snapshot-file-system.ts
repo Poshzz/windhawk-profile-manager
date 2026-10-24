@@ -5,7 +5,6 @@ import {
   open,
   readFile,
   readdir,
-  realpath,
   rename as renameFile,
   unlink,
 } from 'node:fs/promises';
@@ -116,9 +115,9 @@ function comparablePath(path: string): string {
 export class NodeSnapshotFileSystem implements SnapshotFileSystem {
   private readonly acl: SnapshotAcl;
   /**
-   * realpath() is comparatively expensive on Windows. A directory verified in
-   * this process is re-checked with lstat on every access, but its ancestor
-   * chain is resolved only once. A new process always verifies from scratch.
+   * A directory verified in this process is re-checked with lstat on every
+   * access, but its ancestor chain is walked only once. A new process always
+   * verifies from scratch.
    */
   private readonly verifiedDirectories = new Set<string>();
   private readonly aclDirectories = new Set<string>();
@@ -237,10 +236,11 @@ export class NodeSnapshotFileSystem implements SnapshotFileSystem {
   }
 
   /**
-   * A junction/symlink anywhere below the drive root would let the elevated
-   * helper read or write a directory the user only appears to own. realpath
-   * resolves the whole chain; any difference from the lexical path is a
-   * reparse point and is rejected.
+   * A junction or symlink anywhere below the drive root would let the elevated
+   * helper read or write a directory the user only appears to own. lstat is
+   * used per component instead of realpath(): realpath also expands 8.3 short
+   * names, which are a harmless alternate spelling on some Windows hosts. A
+   * component is rejected when lstat itself reports a reparse point.
    */
   private async assertDirectoryIsReal(directory: string): Promise<void> {
     const key = comparablePath(directory);
@@ -252,9 +252,9 @@ export class NodeSnapshotFileSystem implements SnapshotFileSystem {
     }
     if (this.verifiedDirectories.has(key)) return;
 
-    const resolved = await realpath(directory);
-    if (comparablePath(resolved) !== key) {
-      throw new ValidationError('The snapshot path must not traverse a junction or symbolic link.');
+    const parent = dirname(directory);
+    if (parent !== directory) {
+      await this.assertDirectoryIsReal(parent);
     }
     this.verifiedDirectories.add(key);
   }
