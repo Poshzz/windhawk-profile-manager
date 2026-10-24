@@ -4,7 +4,7 @@
 is **not a public release**.
 
 - Artifact: `release/Windhawk-Profile-Manager-0.1.0-x64.exe`
-- SHA-256: `163674a01109026025cfd3e25322c12131a673eb9dac6729441fc9c76e839ffc`
+- SHA-256: `6c071972a5a42edada218cbe45ea62e2e8be737c4c255f6da77844288fb2ef74`
 - Source tag: `v0.1.0-dev.1`
 - Installer type: per-machine NSIS; installs to
   `%ProgramFiles%\WindhawkProfileManager`
