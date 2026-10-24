@@ -43,7 +43,7 @@
 Configuring Windhawk mods manually can be tedious and prone to registry misalignment. This manager provides an automated, transactional layer that captures machine states, verifies execution plans, coordinates an isolated elevated helper, and ensures zero runtime downtime for the core Windhawk engine.
 
 > [!WARNING]
-> **Developer Build Notice:** Release `v0.1.0-dev.1` is an unsigned test build. Because binaries do not yet have an Authenticode certificate, Windows SmartScreen and Smart App Control will flag or block installation. Refer to [`docs/UNSIGNED-BUILD.md`](./docs/UNSIGNED-BUILD.md) for verification checksums and test-VM instructions.
+> **Developer Build Notice:** Release `v0.1.0-dev.2` is an unsigned test build. Because binaries do not yet have an Authenticode certificate, Windows SmartScreen and Smart App Control will flag or block installation. Refer to [`docs/UNSIGNED-BUILD.md`](./docs/UNSIGNED-BUILD.md) for verification checksums and test-VM instructions.
 
 ---
 
